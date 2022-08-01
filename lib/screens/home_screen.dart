@@ -37,10 +37,15 @@ class _HomeScreenState extends State<HomeScreen> {
     debugPrint('Opacity: $_opacity');
 
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size(screenSize.width, 70),
-        child: TopBarContent(opacity: _opacity),
-      ),
+      appBar: screenSize.width < 800
+          ? AppBar(
+              backgroundColor: Colors.white.withOpacity(0.5),
+              elevation: 0,
+            )
+          : PreferredSize(
+              preferredSize: Size(screenSize.width, 70),
+              child: TopBarContent(opacity: _opacity),
+            ),
       extendBodyBehindAppBar: true,
       body: SingleChildScrollView(
         controller: _scrollController,

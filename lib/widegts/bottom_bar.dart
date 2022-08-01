@@ -28,11 +28,23 @@ class BottomBar extends StatelessWidget {
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              BottomBarColumn(
+              const BottomBarColumn(
                 heading: 'ABOUT',
                 s1: 'Contact Us',
                 s2: 'About Us',
                 s3: 'Careers',
+              ),
+              const BottomBarColumn(
+                heading: 'HELP',
+                s1: 'Payment',
+                s2: 'Cancellation',
+                s3: 'FAQ',
+              ),
+              const BottomBarColumn(
+                heading: 'SOCIAL',
+                s1: 'Twitter',
+                s2: 'Facebook',
+                s3: 'YouTube',
               ),
               Container(
                 color: Colors.white,
@@ -55,8 +67,19 @@ class BottomBar extends StatelessWidget {
                     isAddress: true,
                   ),
                 ],
-              )
+              ),
             ],
+          ),
+          const Divider(
+            color: Colors.white,
+          ),
+          const SizedBox(height: 20),
+          const Text(
+            'Copyright © 2021 | Alamin Karno',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 14,
+            ),
           ),
         ],
       ),

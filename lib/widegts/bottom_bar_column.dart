@@ -28,6 +28,30 @@ class BottomBarColumn extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 20),
+          Text(
+            s1,
+            style: const TextStyle(
+              fontSize: 14,
+              color: Colors.white,
+            ),
+          ),
+          const SizedBox(height: 10),
+          Text(
+            s2,
+            style: const TextStyle(
+              fontSize: 14,
+              color: Colors.white,
+            ),
+          ),
+          const SizedBox(height: 10),
+          Text(
+            s3,
+            style: const TextStyle(
+              fontSize: 14,
+              color: Colors.white,
+            ),
+          ),
+          const SizedBox(height: 10),
         ],
       ),
     );
