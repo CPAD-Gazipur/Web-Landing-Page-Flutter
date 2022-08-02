@@ -12,25 +12,44 @@ class FeatureHeading extends StatelessWidget {
         left: screenSize.width / 15,
         right: screenSize.width / 15,
       ),
-      child: Row(
-        children: const [
-          Text(
-            'Featured',
-            style: TextStyle(
-              fontSize: 36,
-              color: Color(0xFF077BD7),
-              fontFamily: 'Raleway',
-              fontWeight: FontWeight.bold,
+      child: screenSize.width < 800
+          ? Column(
+              children: const [
+                Text(
+                  'Featured',
+                  style: TextStyle(
+                    fontSize: 36,
+                    color: Color(0xFF077BD7),
+                    fontFamily: 'Raleway',
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 5),
+                Text(
+                  'Clue of the wooden cottage',
+                  textAlign: TextAlign.end,
+                ),
+              ],
+            )
+          : Row(
+              children: const [
+                Text(
+                  'Featured',
+                  style: TextStyle(
+                    fontSize: 36,
+                    color: Color(0xFF077BD7),
+                    fontFamily: 'Raleway',
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Expanded(
+                  child: Text(
+                    'Clue of the wooden cottage',
+                    textAlign: TextAlign.end,
+                  ),
+                ),
+              ],
             ),
-          ),
-          Expanded(
-            child: Text(
-              'Clue of the wooden cottage',
-              textAlign: TextAlign.end,
-            ),
-          ),
-        ],
-      ),
     );
   }
 }
