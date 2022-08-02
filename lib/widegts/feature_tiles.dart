@@ -5,9 +5,9 @@ class FeatureTiles extends StatelessWidget {
   FeatureTiles({Key? key, required this.screenSize}) : super(key: key);
 
   final List<String> assets = [
-    'assets/images/test1.jpeg',
-    'assets/images/test2.jpeg',
-    'assets/images/test3.jpeg',
+    'assets/images/sci_fi.jpg',
+    'assets/images/photography_web.jpeg',
+    'assets/images/romance.jpeg',
   ];
 
   final List<String> title = ['Sci-fi', 'Photography', 'Romance'];

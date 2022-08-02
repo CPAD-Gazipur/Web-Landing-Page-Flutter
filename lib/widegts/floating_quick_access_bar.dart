@@ -18,10 +18,10 @@ class _FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
   List<String> items = ['History', 'Science', 'Philosophy', 'Novels'];
 
   List<IconData> icons = [
-    Icons.location_on,
-    Icons.date_range,
+    Icons.history,
+    Icons.science,
     Icons.people,
-    Icons.wb_sunny,
+    Icons.book,
   ];
 
   List<Widget> generateRowElements() {
@@ -37,11 +37,22 @@ class _FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
           });
         },
         onTap: () {},
-        child: Text(
-          items[i],
-          style: TextStyle(
-            color: isHovering[i] ? Colors.blueGrey[900] : Colors.blueGrey,
-          ),
+        child: Row(
+          children: [
+            Icon(
+              icons[i],
+              color: isHovering[i] ? Colors.blueGrey[900] : Colors.blueGrey,
+            ),
+            SizedBox(
+              width: widget.screenSize.width / 50,
+            ),
+            Text(
+              items[i],
+              style: TextStyle(
+                color: isHovering[i] ? Colors.blueGrey[900] : Colors.blueGrey,
+              ),
+            ),
+          ],
         ),
       );
 
@@ -78,19 +89,71 @@ class _FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
               ? widget.screenSize.width / 12
               : widget.screenSize.width / 5,
         ),
-        child: Card(
-          elevation: 5,
-          child: Padding(
-            padding: EdgeInsets.only(
-              top: widget.screenSize.height / 50,
-              bottom: widget.screenSize.height / 50,
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: generateRowElements(),
-            ),
-          ),
-        ),
+        child: widget.screenSize.width < 800
+            ? Column(
+                children: [
+                  for (int i = 0; i < items.length; i++)
+                    InkWell(
+                      splashColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      onHover: (value) {
+                        setState(() {
+                          value ? isHovering[i] = true : isHovering[i] = false;
+                        });
+                      },
+                      onTap: () {},
+                      child: Padding(
+                        padding: EdgeInsets.only(
+                          bottom: widget.screenSize.height / 70,
+                        ),
+                        child: Card(
+                          elevation: 5,
+                          child: Padding(
+                            padding: EdgeInsets.only(
+                              top: widget.screenSize.height / 45,
+                              bottom: widget.screenSize.height / 45,
+                              left: widget.screenSize.height / 40,
+                            ),
+                            child: Row(
+                              children: [
+                                Icon(
+                                  icons[i],
+                                  color: isHovering[i]
+                                      ? Colors.blueGrey[900]
+                                      : Colors.blueGrey,
+                                ),
+                                SizedBox(
+                                  width: widget.screenSize.width / 50,
+                                ),
+                                Text(
+                                  items[i],
+                                  style: TextStyle(
+                                    color: isHovering[i]
+                                        ? Colors.blueGrey[900]
+                                        : Colors.blueGrey,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                ],
+              )
+            : Card(
+                elevation: 5,
+                child: Padding(
+                  padding: EdgeInsets.only(
+                    top: widget.screenSize.height / 50,
+                    bottom: widget.screenSize.height / 50,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: generateRowElements(),
+                  ),
+                ),
+              ),
       ),
     );
   }
