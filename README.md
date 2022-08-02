@@ -1,16 +1,45 @@
-# web_landing_page
+# Responsive Web Landing Page (UI) - Flutter
 
-A responsive website landing page using flutter.
+In this Resnposive Web Landing Page I have covered how to build responsive top bar, top bar with opacity,  drawer menu, background image, aspect ratio, hover over effect, access bar, floating point access bar, responsive carousel slider with indicator,indicator with hover over effect, change color on hover over, aspect ration and slider, responsive image slider,featured heading, flutter slider with image, flutter responsive footer. This app is also suitable for mobile devices.
 
-## Getting Started
+## Live Site:
 
-This project is a starting point for a Flutter application.
+#### [Responsive Web Landing Page](https://cpad-gazipur.github.io/Web-Landing-Page-Flutter/)
 
-A few resources to get you started if this is your first Flutter project:
+## Download APK/Software:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+#### [Responsive Web Landing Page App](https://github.com/CPAD-Gazipur/Web-Landing-Page-Flutter/releases/tag/v1.0.0)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Phone Screenshots:
+
+
+
+| Home (Header)      |  Home (Drawer)  |  Home (Carousel)  |  Home (Bottom)  |
+| :----:  |  :----:   |   :----:   | :----: |
+| <img src="screenshots\web_lannding_home.png" width="250">       |  <img src="screenshots\web_lannding_home_drawer.png" width="250">     |  <img src="screenshots\web_lannding_home_carusol.png" width="250">  | <img src="screenshots\web_lannding_home_bottom.png" width="250">  |
+
+
+## Web Screenshots:
+
+
+| Web Home (Header)   | Web Home (Feature) | 
+| :---:       |    :----:   | 
+| <img src="screenshots\web_lannding_home_web.jpeg">       |  <img src="screenshots\web_lannding_home_carusol_web.jpeg">     | 
+| Web Home (Carousel)  | Web Profile Screen | 
+| <img src="screenshots\web_lannding_home_carusol_main_web.jpeg">       |  <img src="screenshots\web_lannding_home_bottom_web.jpeg">     |
+
+
+#### Disclaimer
+This project is made only for practice purpose. Anyone can use it but the risk has to be taken by the user. For any query please contact me.
+
+## Repository Owner Info
+
+### Md. Al-Amin
+###### Junior Software Engineer (Android & iOS) at Rokomari.com
+
+__Email :__ [ alamin.karno@outlook.com ](mailto:alamin.karno@outlook.com) \
+__Github :__ [Md. Al-Amin](https://github.com/alamin-karno) \
+__Facebook :__ [মোঃ আল-আমিন খন্দকার কর্ণ](https://facebook.com/alamin.kanro786) \
+__Linkedin :__ [Md. Al-Amin](https://www.linkedin.com/in/alaminkarno/) \
+__YouTube :__ [Alamin Karno](https://youtube.com/alaminkarno/) \
+__Twitter :__ [Md. Al-Amin](https://twitter.com/alamin_karno/)
