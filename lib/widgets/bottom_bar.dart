@@ -86,11 +86,22 @@ class BottomBar extends StatelessWidget {
                   color: Colors.white60,
                 ),
                 const SizedBox(height: 20),
-                Text(
-                  'Copyright © 2022 | Alamin Karno',
-                  style: TextStyle(
-                    color: Colors.blueGrey[100],
-                    fontSize: 14,
+                InkWell(
+                  onTap: () async {
+                    var addressUrl = 'https://github.com/alamin-karno';
+                    try {
+                      await launchUrl(Uri.parse(addressUrl));
+                    } catch (e) {
+                      await Clipboard.setData(ClipboardData(text: addressUrl));
+                      debugPrint('Address Copied');
+                    }
+                  },
+                  child: Text(
+                    'Copyright © 2022 | Alamin Karno',
+                    style: TextStyle(
+                      color: Colors.blueGrey[100],
+                      fontSize: 14,
+                    ),
                   ),
                 ),
               ],
@@ -122,11 +133,11 @@ class BottomBar extends StatelessWidget {
                     const BottomBarColumn(
                       heading: 'SOCIAL',
                       s1: 'Twitter',
-                      s1Link: '',
+                      s1Link: 'https://twitter.com/alamin_karno',
                       s2: 'Facebook',
-                      s2Link: '',
+                      s2Link: 'https://www.facebook.com/alamin.karnoOfficial',
                       s3: 'YouTube',
-                      s3Link: '',
+                      s3Link: 'https://youtube.com/alaminkarno',
                     ),
                     Container(
                       color: Colors.white60,
