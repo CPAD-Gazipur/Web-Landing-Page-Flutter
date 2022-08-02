@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:web_landing_page/screens/screens.dart';
 
+import 'widgets/widgets.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -14,6 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Web Landing Page',
       debugShowCheckedModeBanner: false,
+      scrollBehavior: AppScrollBehavior(),
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

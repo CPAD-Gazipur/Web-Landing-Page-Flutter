@@ -1,3 +1,4 @@
+export 'app_scroll_behavior.dart';
 export 'bottom_bar.dart';
 export 'bottom_bar_column.dart';
 export 'feature_heading.dart';
