@@ -39,13 +39,25 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: screenSize.width < 800
           ? AppBar(
-              backgroundColor: Colors.white.withOpacity(0.5),
+              backgroundColor: Colors.white.withOpacity(_opacity),
               elevation: 0,
+              iconTheme: const IconThemeData(color: Colors.blue),
+              title: const Text(
+                'LWAK',
+                style: TextStyle(
+                  fontSize: 26,
+                  color: Color(0xFF077BD7),
+                  fontFamily: 'Raleway',
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: 3,
+                ),
+              ),
             )
           : PreferredSize(
               preferredSize: Size(screenSize.width, 70),
               child: TopBarContent(opacity: _opacity),
             ),
+      drawer: const MenuDrawer(),
       extendBodyBehindAppBar: true,
       body: SingleChildScrollView(
         controller: _scrollController,
@@ -53,14 +65,12 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Stack(
               children: [
-                Container(
-                  child: SizedBox(
-                    height: screenSize.height * 0.65,
-                    width: screenSize.width,
-                    child: Image.asset(
-                      'assets/images/background.png',
-                      fit: BoxFit.cover,
-                    ),
+                SizedBox(
+                  height: screenSize.height * 0.65,
+                  width: screenSize.width,
+                  child: Image.asset(
+                    'assets/images/background.png',
+                    fit: BoxFit.cover,
                   ),
                 ),
                 Column(
