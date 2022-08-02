@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:web_landing_page/widegts/widegts.dart';
+
+import 'widgets.dart';
 
 class FloatingQuickAccessBar extends StatefulWidget {
   final Size screenSize;

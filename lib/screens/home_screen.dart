@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:web_landing_page/widegts/main_carousel_slider.dart';
-import 'package:web_landing_page/widegts/widegts.dart';
+
+import '../widgets/widgets.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);

@@ -94,7 +94,7 @@ class MenuDrawer extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: Text(
-                    'Copyright © 2021 | Alamin Karno',
+                    'Copyright © 2022 | Alamin Karno',
                     style: TextStyle(
                       color: Colors.grey,
                       fontSize: 14,

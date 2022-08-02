@@ -22,9 +22,10 @@ class BottomBarColumn extends StatelessWidget {
         children: [
           Text(
             heading,
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 18,
-              color: Colors.white,
+              color: Colors.blueGrey[100],
+              fontWeight: FontWeight.w500,
             ),
           ),
           const SizedBox(height: 20),
@@ -32,7 +33,7 @@ class BottomBarColumn extends StatelessWidget {
             s1,
             style: const TextStyle(
               fontSize: 14,
-              color: Colors.white,
+              color: Colors.white60,
             ),
           ),
           const SizedBox(height: 10),
@@ -40,7 +41,7 @@ class BottomBarColumn extends StatelessWidget {
             s2,
             style: const TextStyle(
               fontSize: 14,
-              color: Colors.white,
+              color: Colors.white60,
             ),
           ),
           const SizedBox(height: 10),
@@ -48,7 +49,7 @@ class BottomBarColumn extends StatelessWidget {
             s3,
             style: const TextStyle(
               fontSize: 14,
-              color: Colors.white,
+              color: Colors.white60,
             ),
           ),
           const SizedBox(height: 10),

@@ -21,10 +21,10 @@ class InfoText extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          '$type: ',
-          style: const TextStyle(
+          '$type : ',
+          style: TextStyle(
             fontSize: 16,
-            color: Colors.white,
+            color: Colors.blueGrey[100],
           ),
         ),
         Flexible(
@@ -51,9 +51,11 @@ class InfoText extends StatelessWidget {
             child: Text(
               text,
               textAlign: TextAlign.justify,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
               style: const TextStyle(
                 fontSize: 16,
-                color: Colors.white,
+                color: Colors.white60,
               ),
             ),
           ),
