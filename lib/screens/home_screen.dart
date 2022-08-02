@@ -42,14 +42,23 @@ class _HomeScreenState extends State<HomeScreen> {
               backgroundColor: Colors.white.withOpacity(_opacity),
               elevation: 0,
               iconTheme: const IconThemeData(color: Colors.blue),
-              title: const Text(
-                'LWAK',
-                style: TextStyle(
-                  fontSize: 26,
-                  color: Color(0xFF077BD7),
-                  fontFamily: 'Raleway',
-                  fontWeight: FontWeight.w900,
-                  letterSpacing: 3,
+              title: InkWell(
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => super.widget),
+                  );
+                },
+                child: const Text(
+                  'Author',
+                  style: TextStyle(
+                    fontSize: 26,
+                    color: Color(0xFF077BD7),
+                    fontFamily: 'Raleway',
+                    fontWeight: FontWeight.w900,
+                    letterSpacing: 3,
+                  ),
                 ),
               ),
             )

@@ -37,14 +37,23 @@ class _TopBarContentState extends State<TopBarContent> {
                   SizedBox(
                     width: screenSize.width / 6,
                   ),
-                  const Text(
-                    'LWAK',
-                    style: TextStyle(
-                      fontSize: 26,
-                      color: Color(0xFF077BD7),
-                      fontFamily: 'Raleway',
-                      fontWeight: FontWeight.w900,
-                      letterSpacing: 3,
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) => super.widget),
+                      );
+                    },
+                    child: const Text(
+                      'Author',
+                      style: TextStyle(
+                        fontSize: 26,
+                        color: Color(0xFF077BD7),
+                        fontFamily: 'Raleway',
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: 3,
+                      ),
                     ),
                   ),
                   SizedBox(width: screenSize.width / 15),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'widgets.dart';
 
@@ -28,24 +30,33 @@ class BottomBar extends StatelessWidget {
                 Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    const BottomBarColumn(
+                  children: const [
+                    BottomBarColumn(
                       heading: 'ABOUT',
                       s1: 'Contact Us',
+                      s1Link: '',
                       s2: 'About Us',
+                      s2Link: '',
                       s3: 'Careers',
+                      s3Link: '',
                     ),
-                    const BottomBarColumn(
+                    BottomBarColumn(
                       heading: 'HELP',
                       s1: 'Payment',
+                      s1Link: '',
                       s2: 'Cancellation',
+                      s2Link: '',
                       s3: 'FAQ',
+                      s3Link: '',
                     ),
-                    const BottomBarColumn(
+                    BottomBarColumn(
                       heading: 'SOCIAL',
                       s1: 'Twitter',
+                      s1Link: 'https://twitter.com/alamin_karno',
                       s2: 'Facebook',
+                      s2Link: 'https://www.facebook.com/alamin.karnoOfficial',
                       s3: 'YouTube',
+                      s3Link: 'https://youtube.com/alaminkarno',
                     ),
                   ],
                 ),
@@ -93,20 +104,29 @@ class BottomBar extends StatelessWidget {
                     const BottomBarColumn(
                       heading: 'ABOUT',
                       s1: 'Contact Us',
+                      s1Link: '',
                       s2: 'About Us',
+                      s2Link: '',
                       s3: 'Careers',
+                      s3Link: '',
                     ),
                     const BottomBarColumn(
                       heading: 'HELP',
                       s1: 'Payment',
+                      s1Link: '',
                       s2: 'Cancellation',
+                      s2Link: '',
                       s3: 'FAQ',
+                      s3Link: '',
                     ),
                     const BottomBarColumn(
                       heading: 'SOCIAL',
                       s1: 'Twitter',
+                      s1Link: '',
                       s2: 'Facebook',
+                      s2Link: '',
                       s3: 'YouTube',
+                      s3Link: '',
                     ),
                     Container(
                       color: Colors.white60,
@@ -136,11 +156,22 @@ class BottomBar extends StatelessWidget {
                   color: Colors.white60,
                 ),
                 const SizedBox(height: 20),
-                Text(
-                  'Copyright © 2022 | Alamin Karno',
-                  style: TextStyle(
-                    color: Colors.blueGrey[100],
-                    fontSize: 14,
+                InkWell(
+                  onTap: () async {
+                    var addressUrl = 'https://github.com/alamin-karno';
+                    try {
+                      await launchUrl(Uri.parse(addressUrl));
+                    } catch (e) {
+                      await Clipboard.setData(ClipboardData(text: addressUrl));
+                      debugPrint('Address Copied');
+                    }
+                  },
+                  child: Text(
+                    'Copyright © 2022 | Alamin Karno',
+                    style: TextStyle(
+                      color: Colors.blueGrey[100],
+                      fontSize: 14,
+                    ),
                   ),
                 ),
               ],
