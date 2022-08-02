@@ -8,7 +8,7 @@ class MainHeading extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(
-        top: screenSize.height / 10,
+        top: screenSize.height / 20,
         bottom: screenSize.height / 15,
         left: screenSize.width / 15,
         right: screenSize.width / 15,
